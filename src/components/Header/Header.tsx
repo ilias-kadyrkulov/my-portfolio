@@ -11,9 +11,9 @@ type Props = {
 const Header = (props: Props) => {
     const [isScrolled, setIsScrolled] = useState(false)
     const [isNavMOpen, setIsNavMOpen] = useState(false)
-    
+
     useEffect(() => {
-        const handleScroll = () => {  
+        const handleScroll = () => {
             if (window.scrollY > 0 && !isScrolled) {
                 setIsScrolled(true)
             } else if (window.scrollY === 0 && isScrolled) {
@@ -48,10 +48,17 @@ const Header = (props: Props) => {
                     </Link>
                 </div>
                 <div className={s.listD}>
-                    <Link onClick={() => props.scrollToAbout()} to="/my-portfolio/#about">
+                    <Link
+                        onClick={() => props.scrollToAbout()}
+                        to="/my-portfolio/#about"
+                    >
                         About
                     </Link>
-                    <Link onClick={() => props.scrollToExp()} className="divider" to="/my-portfolio/#experience">
+                    <Link
+                        onClick={() => props.scrollToExp()}
+                        className="divider"
+                        to="/my-portfolio/#experience"
+                    >
                         Experience
                     </Link>
                     <Link to="/my-portfolio/contact">Contact</Link>
@@ -70,13 +77,31 @@ const Header = (props: Props) => {
                 <div
                     className={`${s.listMM} ${isNavMOpen ? s.listMMOpen : ''}`}
                 >
-                    <Link onClick={() => props.scrollToAbout()} to="/my-portfolio/#about">
+                    <Link
+                        onClick={() => {
+                            setIsNavMOpen(false)
+                            props.scrollToAbout()
+                        }}
+                        to="/my-portfolio/#about"
+                    >
                         About
                     </Link>
-                    <Link onClick={() => props.scrollToExp()} className="divider" to="/my-portfolio/#experience">
+                    <Link
+                        onClick={() => {
+                            setIsNavMOpen(false)
+                            props.scrollToExp()
+                        }}
+                        className="divider"
+                        to="/my-portfolio/#experience"
+                    >
                         Experience
                     </Link>
-                    <Link to="/my-portfolio/contact">Contact</Link>
+                    <Link onClick={() => {
+                        setIsNavMOpen(false)
+                        window.scrollTo({top: 0})
+                    }} to="/my-portfolio/contact">
+                        Contact
+                    </Link>
                 </div>
             </section>
         </nav>
