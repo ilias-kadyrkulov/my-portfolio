@@ -21,10 +21,10 @@ function App() {
             <div className="app">
                 <BrowserRouter>
                     <Routes>
-                        <Route path="/" element={<Layout scrollToAbout={handleAboutNavClick} scrollToExp={handleExpNavClick} />}>
+                        <Route path="/my-portfolio/" element={<Layout scrollToAbout={handleAboutNavClick} scrollToExp={handleExpNavClick} />}>
                             <Route index element={<Home aboutRef={aboutRef} experienceRef={experienceRef} />} />
-                            <Route path="contact" element={<Contact />} />
-                            <Route path="*" element={<NotFound />} />
+                            <Route path="/my-portfolio/contact" element={<Contact />} />
+                            <Route path="/my-portfolio/*" element={<NotFound />} />
                         </Route>
                     </Routes>
                 </BrowserRouter>
