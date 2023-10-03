@@ -25,7 +25,7 @@ const Footer = () => {
                 </div>
             </section>
             <div className={s.lastLine}>
-                <Link to="/my-portfolio/">Ilias Kadyrkulov</Link>
+                <Link to="/my-portfolio/" onClick={() => window.scrollTo({top: 0})}>Ilias Kadyrkulov</Link>
             </div>
         </div>
     )

@@ -1,6 +1,7 @@
 .hero {
     height: 700px;
     background-color: rgba(137, 9, 27, 0.97);
+    overflow: hidden;
 
     .container {
         position: relative;
@@ -13,6 +14,7 @@
         color: #ffffff;
 
         .content {
+            width: 50%;
             margin-left: 2rem;
             p {
                 font-size: 1.6rem;
@@ -35,33 +37,32 @@
 
         .myself {
             position: absolute;
-            right: 25%;
-            transform: translateX(50%);
+            left: 25%;
             bottom: 0;
             width: 100%;
-            max-width: 450px;
-            min-width: 10%;
-            min-height: 10%;
+            height: 85%;
+            object-position: center center;
+            object-fit: cover;
         }
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 900px) {
     .hero {
         height: 1000px;
         padding-top: 10rem;
         .container {
             align-items: unset;
             .content {
+                width: 100%;
                 margin: 0;
                 button {
                     width: 100%;
                 }
             }
             .myself {
-                right: 50%;
-                transform: translateX(50%);
-                max-width: 400px;
+                left: 0;
+                height: 65%;
             }
         }
     }
@@ -73,7 +74,6 @@
             padding: 0 2rem;
             text-align: center;
             .content {
-                width: 100%;
                 margin: 0;
                 button {
                     width: 100%;
@@ -89,9 +89,9 @@
                     font-size: 1.2rem;
                 }
             }
-            .myself {
+            /* .myself {
                 max-width: 350px;
-            }
+            } */
         }
     }
 }
@@ -112,7 +112,7 @@
                 }
             }
             .myself {
-                max-width: 300px;
+                height: 60%;
             }
         }
     }
