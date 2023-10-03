@@ -1,0 +1,31 @@
+ul {
+    padding-left: 2.5rem;
+    margin-top: 1rem;
+    list-style-type: none;
+
+    li {
+        position: relative;
+        margin: 0 0 1rem 2rem;
+        
+        &::before {
+            position: absolute;
+            content: '';
+            top: 0.85rem;
+            left: -1.5rem;
+            height: 8px;
+            width: 2px;
+            background: linear-gradient(90deg, rgba(137, 9, 27, 0.97), #cf1a1a);
+        }
+
+        &::after {
+            position: absolute;
+            content: '';
+            top: 0.85rem;
+            left: -1.5rem;
+            height: 8px;
+            width: 2px;
+            background: linear-gradient(90deg, rgba(137, 9, 27, 0.97), #cf1a1a);
+            transform: rotate(90deg);
+        }
+    }
+}

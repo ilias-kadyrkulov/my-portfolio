@@ -1,0 +1,136 @@
+.footer {
+    background-color: rgba(137, 9, 27, 0.97);
+    padding: 3rem 0;
+    .container {
+        margin: auto;
+        padding: 0 2rem;
+        max-width: 900px;
+    }
+    .left {
+        max-width: 450px;
+        button {
+            max-width: 100%;
+        }
+    }
+    h4 {
+        text-transform: uppercase;
+        color: #fff;
+        font-family: 'Exo 2';
+        font-weight: 400;
+        font-size: 3rem;
+        line-height: 4rem;
+        margin-bottom: 3rem;
+    }
+
+    .right {
+        margin-top: 2rem;
+        width: 100px;
+
+        div {
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            position: relative;
+            font-family: 600;
+            margin-left: 2rem;
+            max-width: 100%;
+
+            &::before {
+                position: absolute;
+                content: '';
+                top: 0.6rem;
+                left: -1.5rem;
+                height: 8px;
+                width: 2px;
+                background: #fff;
+            }
+
+            &::after {
+                position: absolute;
+                content: '';
+                top: 0.6rem;
+                left: -1.5rem;
+                height: 8px;
+                width: 2px;
+                background: #fff;
+                transform: rotate(90deg);
+            }
+
+            &:hover {
+                &::before {
+                    width: 0;
+                }
+                color: #fff;
+            }
+        }
+
+        a {
+            position: relative;
+            z-index: 0;
+
+            &::before {
+                position: absolute;
+                content: '';
+                width: 100%;
+                height: 0%;
+                bottom: 0;
+                z-index: -1;
+                background-image: linear-gradient(
+                    90deg,
+                    rgba(137, 9, 27, 0.97),
+                    #cecece
+                );
+                transition: all 0.3s ease-in-out;
+            }
+
+            &:hover {
+                &::before {
+                    height: 100%;
+                }
+                color: #fff;
+            }
+        }
+    }
+
+    .lastLine {
+        text-align: center;
+        font-family: 'Exo 2';
+        font-family: 600;
+
+        a {
+            position: relative;
+            z-index: 0;
+
+            &::before {
+                position: absolute;
+                content: '';
+                width: 100%;
+                height: 0%;
+                bottom: 0;
+                z-index: -1;
+                background-image: linear-gradient(
+                    90deg,
+                    rgba(137, 9, 27, 0.97),
+                    #cecece
+                );
+                transition: all 0.3s ease-in-out;
+            }
+
+            &:hover {
+                &::before {
+                    height: 100%;
+                }
+                color: #fff;
+            }
+        }
+    }
+}
+
+@media (min-width: 700px) {
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+    .lastLine {
+        margin-top: 2rem;
+    }
+}

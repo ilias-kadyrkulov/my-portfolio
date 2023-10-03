@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700&family=Roboto+Mono:wght@300;400;500;600;700&display=swap');
+
+
+@mixin heading {
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+
+    > h2 {
+        font-family: 'Exo 2', sans-serif;
+        font-size: 4rem;
+        font-weight: 700;
+        color: rgba(137, 9, 27, 0.97);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    height: 100vh;
+    background-color: #fcfcfc;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    font-weight: 400;
+    font-family: 'Exo 2', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+a {
+    text-decoration: none;
+    background-color: transparent;
+    color: #000;
+}
+
+p,
+li {
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+}
+
+
+
+@media (max-width: 900px) {
+  .container {
+      padding: 0 4rem;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+      padding: 0 2rem;
+  }
+}
+@media (max-width: 300px) {
+    .container {
+        padding: 0 1rem;
+    }
+  }
+  
