@@ -39,7 +39,7 @@ const Header = (props: Props) => {
             ></div>
             <section className={s.container}>
                 <div className={s.logoWrapper}>
-                    <Link to="/">
+                    <Link to="/my-portfolio/">
                         <img
                             className={s.logo}
                             src={portfolioLogo}
