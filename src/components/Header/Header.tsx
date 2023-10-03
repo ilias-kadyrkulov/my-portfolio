@@ -76,7 +76,7 @@ const Header = (props: Props) => {
                     <Link onClick={() => props.scrollToExp()} className="divider" to="/my-portfolio/#experience">
                         Experience
                     </Link>
-                    <Link to="/contact">Contact</Link>
+                    <Link to="/my-portfolio/contact">Contact</Link>
                 </div>
             </section>
         </nav>
