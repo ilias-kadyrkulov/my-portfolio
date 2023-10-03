@@ -1,4 +1,4 @@
-// import s from './Contact.module.scss'
+import s from './Contact.module.scss'
 // import { Formik } from 'formik'
 
 const Contact = () => {
@@ -53,7 +53,7 @@ const Contact = () => {
         //         )}
         //     </Formik>
         // </div>
-        <div>In development</div>
+        <div className={s.contact}>In development</div>
     )
 }
 
