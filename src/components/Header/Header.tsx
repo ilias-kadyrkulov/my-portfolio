@@ -70,10 +70,10 @@ const Header = (props: Props) => {
                 <div
                     className={`${s.listMM} ${isNavMOpen ? s.listMMOpen : ''}`}
                 >
-                    <Link onClick={() => props.scrollToAbout()} to="/#about">
+                    <Link onClick={() => props.scrollToAbout()} to="/my-portfolio/#about">
                         About
                     </Link>
-                    <Link onClick={() => props.scrollToExp()} className="divider" to="/#experience">
+                    <Link onClick={() => props.scrollToExp()} className="divider" to="/my-portfolio/#experience">
                         Experience
                     </Link>
                     <Link to="/contact">Contact</Link>
