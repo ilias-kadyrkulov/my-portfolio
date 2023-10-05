@@ -10,11 +10,19 @@ const Experience = (props: Props) => {
     const [firstSelected, setFirstSelected] = useState(true)
     const [secondSelected, setSecondSelected] = useState(false)
 
-    const list = [{body: 'React (Redux & Hooks)'}, {body: 'Typescript'}, {body: 'Ant Design (CSS)'}, {body: 'axios (REST API)'}, {body: 'Unit tests (jest)'}, {body: 'Formik, redux-form'}, {body: 'WebSocket'}]
+    const list = [
+        { body: 'React (Redux & Hooks)' },
+        { body: 'Typescript' },
+        { body: 'Ant Design (CSS)' },
+        { body: 'axios (REST API)' },
+        { body: 'Unit tests (jest)' },
+        { body: 'Formik, redux-form' },
+        { body: 'WebSocket' }
+    ]
 
     return (
         <div ref={props.experienceRef} className={s.experience}>
-            <section className='container'>
+            <section className="container">
                 <div className={s.title}>
                     <h2>Experience</h2>
                 </div>
@@ -46,7 +54,14 @@ const Experience = (props: Props) => {
                                     </div>
                                     <div className={s.details}>
                                         <p>
-                                           Samurai Social Network is a realtime chat application for samurai beginners. All credits to Dimych from IT-Kamasutra, the best mentor!
+                                            Samurai Social Network is a social
+                                            network application for frontend
+                                            developers. Here you can follow,
+                                            unfollow developers, change your
+                                            profile data, look for developers by
+                                            certain filters, and have a realtime
+                                            chat. All credits to Dimych from
+                                            IT-Kamasutra, the best mentor!
                                         </p>
                                         <List list={list} />
                                     </div>
@@ -78,9 +93,7 @@ const Experience = (props: Props) => {
                                         <span>October 2023 - Present</span>
                                     </div>
                                     <div className={s.details}>
-                                        <p>
-                                            In development.
-                                        </p>
+                                        <p>In development.</p>
                                     </div>
                                 </div>
                             </div>
