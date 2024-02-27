@@ -7,10 +7,11 @@ type Props = {
 }
 
 const Experience = (props: Props) => {
-    const [firstSelected, setFirstSelected] = useState(true)
-    const [secondSelected, setSecondSelected] = useState(false)
-
-    const list = [
+    const [isFirstSelected, setIsFirstSelected] = useState(true)
+    const [isSecondSelected, setIsSecondSelected] = useState(false)
+    const [isThirdSelected, setIsThirdSelected] = useState(false)
+    
+    const ssnTechList = [
         { body: 'React (Redux & Hooks)' },
         { body: 'Typescript' },
         { body: 'Ant Design (CSS)' },
@@ -18,6 +19,28 @@ const Experience = (props: Props) => {
         { body: 'Unit tests (jest)' },
         { body: 'Formik, redux-form' },
         { body: 'WebSocket' }
+    ]
+
+    const movieTechList = [
+        { body: 'React' },
+        { body: 'RTK' },
+        { body: 'RTK Query' },
+        { body: 'Typescript' },
+        { body: 'TailwindCSS, CSS Modules, styled' },
+        { body: 'Formik' },
+        { body: 'TMDB API' },
+        { body: 'Firestore' }
+    ]
+    
+    const socialTechList = [
+        { body: 'NextJS' },
+        { body: 'NestJS' },
+        { body: 'Postgres - Sequelize ORM' },
+        { body: 'RTK' },
+        { body: 'RTK Query' },
+        { body: 'Typescript' },
+        { body: 'TailwindCSS, CSS Modules' },
+        { body: 'Formik' },
     ]
 
     return (
@@ -30,11 +53,12 @@ const Experience = (props: Props) => {
                     <div className={s.left}>
                         <div
                             className={`${s.expBlock} ${
-                                firstSelected ? s.selected : ''
+                                isFirstSelected ? s.selected : ''
                             }`}
                             onClick={() => {
-                                setFirstSelected(!firstSelected)
-                                setSecondSelected(false)
+                                setIsSecondSelected(false)
+                                setIsThirdSelected(false)
+                                setIsFirstSelected(!isFirstSelected)
                             }}
                         >
                             <div className={s.expBlockTitle}>
@@ -44,7 +68,7 @@ const Experience = (props: Props) => {
                             <div className={s.expBlockDetails}>
                                 <div
                                     className={
-                                        firstSelected
+                                        isFirstSelected
                                             ? s.wrap + ' ' + s.selected
                                             : s.wrap
                                     }
@@ -63,18 +87,19 @@ const Experience = (props: Props) => {
                                             chat. All credits to Dimych from
                                             IT-Kamasutra, the best mentor!
                                         </p>
-                                        <List list={list} />
+                                        <List list={ssnTechList} />
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div
                             className={`${s.expBlock} ${
-                                secondSelected ? s.selected : ''
+                                isSecondSelected ? s.selected : ''
                             }`}
                             onClick={() => {
-                                setSecondSelected(!secondSelected)
-                                setFirstSelected(false)
+                                setIsFirstSelected(false)
+                                setIsThirdSelected(false)
+                                setIsSecondSelected(!isSecondSelected)
                             }}
                         >
                             <div className={s.expBlockTitle}>
@@ -84,16 +109,57 @@ const Experience = (props: Props) => {
                             <div className={s.expBlockDetails}>
                                 <div
                                     className={
-                                        secondSelected
+                                        isSecondSelected
                                             ? s.wrap + ' ' + s.selected
                                             : s.wrap
                                     }
                                 >
                                     <div className={s.timeframe}>
-                                        <span>October 2023 - Present</span>
+                                        <span>
+                                            October 2023 - December 2023
+                                        </span>
                                     </div>
                                     <div className={s.details}>
-                                        <p>In development.</p>
+                                        <p>
+                                            Movieholic is a web application for
+                                            comfortable viewing of films and TV
+                                            series.
+                                        </p>
+                                        <List list={movieTechList} />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            className={`${s.expBlock} ${
+                                isThirdSelected ? s.selected : ''
+                            }`}
+                            onClick={() => {
+                                setIsFirstSelected(false)
+                                setIsSecondSelected(false)
+                                setIsThirdSelected(!isThirdSelected)
+                            }}
+                        >
+                            <div className={s.expBlockTitle}>
+                                <span>Social</span>
+                                <div className={s.expArrow}></div>
+                            </div>
+                            <div className={s.expBlockDetails}>
+                                <div
+                                    className={
+                                        isThirdSelected
+                                            ? s.wrap + ' ' + s.selected
+                                            : s.wrap
+                                    }
+                                >
+                                    <div className={s.timeframe}>
+                                        <span>February 2024 - Present</span>
+                                    </div>
+                                    <div className={s.details}>
+                                        <p>
+                                            Social is a fullstack social network application.
+                                        </p>
+                                        <List list={socialTechList} />
                                     </div>
                                 </div>
                             </div>

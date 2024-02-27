@@ -8,17 +8,22 @@ type Props = {
 const About = (props: Props) => {
     const list = [
         {
-            body: 'React (its Virtual DOM; reconciliation mechanism, how React uses JSX to create V.DOM, etc.);'
+            body: 'JS, React, NextJS;'
         },
         {
-            body: 'Typescript (types, generics, tuples, keyof - typeofoperators, etc.)'
+            body: 'express, NestJS;'
         },
         {
-            body: 'State management (actions, dispatch, thunk), reduxand react-redux libraries, RTK;'
+            body: 'Postgres, MongoDB - Sequelize, Mongoose;'
         },
-        { body: 'Data access (REST API): axios library, RTK Query;' },
-        { body: 'Forms: redux-form, Formik;' },
-        { body: 'JS of course;' }
+        {
+            body: 'Typescript;'
+        },
+        {
+            body: 'Redux, RTK;'
+        },
+        { body: 'axios, RTK Query;' },
+        { body: 'Forms: redux-form, Formik, react-hook-form;' }
     ]
 
     return (
@@ -29,13 +34,12 @@ const About = (props: Props) => {
                 </div>
                 <div className={s.body}>
                     <p>
-                        My name is Ilias. I'm a React frontend developer. I'm
+                        My name is Ilias. I'm a fullstack developer. I'm
                         passionate about music, especially piano, and basically
                         everything when it comes to web development.
                     </p>
                     <p>
-                        I understand workflow of essential things a frontend
-                        developer needs to know:
+                        My <strong>key</strong> tech stack:
                     </p>
                     <List list={list} />
                 </div>

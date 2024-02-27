@@ -31,7 +31,7 @@ const Header = (props: Props) => {
     }, [isScrolled])
 
     return (
-        <nav>
+        <header>
             <div
                 className={`${isScrolled ? s.wrapperActive : s.wrapper} ${
                     isNavMOpen ? s.wrapperActiveNav : ''
@@ -47,7 +47,7 @@ const Header = (props: Props) => {
                         />
                     </Link>
                 </div>
-                <div className={s.listD}>
+                <nav className={s.listD}>
                     <Link
                         onClick={() => props.scrollToAbout()}
                         to="/my-portfolio/#about"
@@ -62,7 +62,7 @@ const Header = (props: Props) => {
                         Experience
                     </Link>
                     <Link to="/my-portfolio/contact">Contact</Link>
-                </div>
+                </nav>
                 <div className={`${s.listM} ${isNavMOpen ? s.open : ''}`}>
                     <button
                         onClick={() => {
@@ -74,7 +74,7 @@ const Header = (props: Props) => {
                         <div className="third"></div>
                     </button>
                 </div>
-                <div
+                <nav
                     className={`${s.listMM} ${isNavMOpen ? s.listMMOpen : ''}`}
                 >
                     <Link
@@ -102,9 +102,9 @@ const Header = (props: Props) => {
                     }} to="/my-portfolio/contact">
                         Contact
                     </Link>
-                </div>
+                </nav>
             </section>
-        </nav>
+        </header>
     )
 }
 
