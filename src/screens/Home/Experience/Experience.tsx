@@ -10,7 +10,7 @@ const Experience = (props: Props) => {
     const [isFirstSelected, setIsFirstSelected] = useState(true)
     const [isSecondSelected, setIsSecondSelected] = useState(false)
     const [isThirdSelected, setIsThirdSelected] = useState(false)
-    
+
     const ssnTechList = [
         { body: 'React (Redux & Hooks)' },
         { body: 'Typescript' },
@@ -31,7 +31,7 @@ const Experience = (props: Props) => {
         { body: 'TMDB API' },
         { body: 'Firestore' }
     ]
-    
+
     const socialTechList = [
         { body: 'NextJS' },
         { body: 'NestJS' },
@@ -41,7 +41,7 @@ const Experience = (props: Props) => {
         { body: 'Socket IO' },
         { body: 'Typescript' },
         { body: 'TailwindCSS, CSS Modules' },
-        { body: 'Formik' },
+        { body: 'Formik' }
     ]
 
     return (
@@ -79,14 +79,22 @@ const Experience = (props: Props) => {
                                     </div>
                                     <div className={s.details}>
                                         <p>
-                                            Samurai Social Network is a social
-                                            network application for frontend
-                                            developers. Here you can follow,
-                                            unfollow developers, change your
-                                            profile data, look for developers by
-                                            certain filters, and have a realtime
-                                            chat. All credits to Dimych from
-                                            IT-Kamasutra, the best mentor!
+                                            <button>
+                                                <a
+                                                    href="https://ilias-kadyrkulov.github.io/react-way-of-samurai/"
+                                                    target="_blank"
+                                                >
+                                                    Samurai Social Network
+                                                </a>
+                                            </button>{' '}
+                                            is a social network application for
+                                            frontend developers. Here you can
+                                            follow, unfollow developers, change
+                                            your profile data, look for
+                                            developers by certain filters, and
+                                            have a realtime chat. All credits to
+                                            Dimych from IT-Kamasutra, the best
+                                            mentor!
                                         </p>
                                         <List list={ssnTechList} />
                                     </div>
@@ -122,9 +130,16 @@ const Experience = (props: Props) => {
                                     </div>
                                     <div className={s.details}>
                                         <p>
-                                            Movieholic is a web application for
-                                            comfortable viewing of films and TV
-                                            series.
+                                            <button>
+                                                <a
+                                                    href="https://movieholic-ik.netlify.app/"
+                                                    target="_blank"
+                                                >
+                                                    Movieholic
+                                                </a>
+                                            </button>{' '}
+                                            is a web application for comfortable
+                                            viewing of films and TV series.
                                         </p>
                                         <List list={movieTechList} />
                                     </div>
@@ -158,7 +173,11 @@ const Experience = (props: Props) => {
                                     </div>
                                     <div className={s.details}>
                                         <p>
-                                            Social is a fullstack social network application.
+                                            <button>
+                                                <a href="#">Social</a>
+                                            </button>{' '}
+                                            is a fullstack social network
+                                            application.
                                         </p>
                                         <List list={socialTechList} />
                                     </div>
