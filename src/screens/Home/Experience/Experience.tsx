@@ -38,6 +38,7 @@ const Experience = (props: Props) => {
         { body: 'Postgres - Sequelize ORM' },
         { body: 'RTK' },
         { body: 'RTK Query' },
+        { body: 'Socket IO' },
         { body: 'Typescript' },
         { body: 'TailwindCSS, CSS Modules' },
         { body: 'Formik' },
